@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['handlegridmovement_0',['HandleGridMovement',['../class_snake.html#a2f0dff3b062cd16968f5cf0fdca75fc2',1,'Snake']]],
-  ['handleinput_1',['HandleInput',['../class_snake.html#a2b90deaaae22de89fbb1f30d7866c77d',1,'Snake']]],
-  ['height_2',['height',['../class_level_grid.html#a07b53ebc7e0b36ebb20a4e3a41b8bb90',1,'LevelGrid']]]
+  ['food_5fgame_5fobject_0',['food_game_object',['../class_level_grid.html#a2ada2f8715dbc41024ba480f51077382',1,'LevelGrid']]],
+  ['food_5fgrid_5fposition_1',['food_grid_position',['../class_level_grid.html#a62a11f0997d013a0d5df3e2823ebdf10',1,'LevelGrid']]],
+  ['food_5fsprite_2',['food_sprite',['../class_game_assets.html#ab57b58cfcc23bff5375a641b336c14e0',1,'GameAssets']]]
 ];

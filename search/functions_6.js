@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['update_0',['Update',['../class_snake.html#a7b955a23fe766918fe8c86270472551e',1,'Snake']]]
+  ['trysnakeeatfood_0',['TrySnakeEatFood',['../class_level_grid.html#a66de065b1ad6a999af07fcb77cd45ab3',1,'LevelGrid']]]
 ];
