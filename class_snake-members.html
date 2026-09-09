@@ -9,6 +9,9 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
@@ -40,7 +43,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 <script type="application/json" id="doxygen-config">
 {
   "relPath": "",
-  "generateTreeView": false,
+  "generateTreeView": true,
   "searchEngine": true,
   "serverBasedSearch": false,
   "disableIndex": false,
@@ -71,6 +74,21 @@ document.addEventListener('DOMContentLoaded', codefold.init);
     </li>
   </ul>
 </div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_snake.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow">
 </div>
@@ -89,8 +107,6 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 </div>
 </div>
 
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">Snake Member List</div></div>
 </div><!--header-->
@@ -99,25 +115,33 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 <p>This is the complete list of members for <a class="el" href="class_snake.html">Snake</a>, including all inherited members.</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="class_snake.html#aa34cbbbbe2c499d3f5f4012213ce000c">Awake</a>()</td><td class="entry"><a class="el" href="class_snake.html">Snake</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_snake.html#aaa2d92a30cbbdde1feb08811196c6adf">GetAngleFromVector</a>(Vector2Int dir)</td><td class="entry"><a class="el" href="class_snake.html">Snake</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_snake.html#aa0968927cb27406caf2da0b9c692a09d">GetFullSnakeBody</a>()</td><td class="entry"><a class="el" href="class_snake.html">Snake</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_snake.html#a99a7bab0f415ff0a41808573a24322da">GetGridPosition</a>()</td><td class="entry"><a class="el" href="class_snake.html">Snake</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_snake.html#a29e8e0ecad3c2dacfb16e83c7c0910b7">grid_move_direction</a></td><td class="entry"><a class="el" href="class_snake.html">Snake</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_snake.html#a05acef0067705413a46e9d6f7ef3a492">grid_move_timer</a></td><td class="entry"><a class="el" href="class_snake.html">Snake</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_snake.html#a3e2cf1d993800d15b2df9922b47f94ea">grid_move_timer_max</a></td><td class="entry"><a class="el" href="class_snake.html">Snake</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_snake.html#a325d0ad878504927ff48fd34db300cb9">grid_position</a></td><td class="entry"><a class="el" href="class_snake.html">Snake</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_snake.html#a2f0dff3b062cd16968f5cf0fdca75fc2">HandleGridMovement</a>()</td><td class="entry"><a class="el" href="class_snake.html">Snake</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_snake.html#a2b90deaaae22de89fbb1f30d7866c77d">HandleInput</a>()</td><td class="entry"><a class="el" href="class_snake.html">Snake</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_snake.html#aea36d674678f8b5be346a5a2fb7125f9">level_grid</a></td><td class="entry"><a class="el" href="class_snake.html">Snake</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_snake.html#a820c12cc45e768323bfa83a33490608f">Setup</a>(LevelGrid level_grid)</td><td class="entry"><a class="el" href="class_snake.html">Snake</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_snake.html#a11adc36f6c5e194e13246c2e519abf6a">CreateSnakeBodyPart</a>()</td><td class="entry"><a class="el" href="class_snake.html">Snake</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_snake.html#aaa2d92a30cbbdde1feb08811196c6adf">GetAngleFromVector</a>(Vector2Int dir)</td><td class="entry"><a class="el" href="class_snake.html">Snake</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_snake.html#aa0968927cb27406caf2da0b9c692a09d">GetFullSnakeBody</a>()</td><td class="entry"><a class="el" href="class_snake.html">Snake</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_snake.html#a99a7bab0f415ff0a41808573a24322da">GetGridPosition</a>()</td><td class="entry"><a class="el" href="class_snake.html">Snake</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_snake.html#a29e8e0ecad3c2dacfb16e83c7c0910b7">grid_move_direction</a></td><td class="entry"><a class="el" href="class_snake.html">Snake</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_snake.html#a05acef0067705413a46e9d6f7ef3a492">grid_move_timer</a></td><td class="entry"><a class="el" href="class_snake.html">Snake</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_snake.html#a3e2cf1d993800d15b2df9922b47f94ea">grid_move_timer_max</a></td><td class="entry"><a class="el" href="class_snake.html">Snake</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_snake.html#a325d0ad878504927ff48fd34db300cb9">grid_position</a></td><td class="entry"><a class="el" href="class_snake.html">Snake</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_snake.html#a2f0dff3b062cd16968f5cf0fdca75fc2">HandleGridMovement</a>()</td><td class="entry"><a class="el" href="class_snake.html">Snake</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_snake.html#a2b90deaaae22de89fbb1f30d7866c77d">HandleInput</a>()</td><td class="entry"><a class="el" href="class_snake.html">Snake</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_snake.html#aea36d674678f8b5be346a5a2fb7125f9">level_grid</a></td><td class="entry"><a class="el" href="class_snake.html">Snake</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_snake.html#a820c12cc45e768323bfa83a33490608f">Setup</a>(LevelGrid level_grid)</td><td class="entry"><a class="el" href="class_snake.html">Snake</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_snake.html#ab6cc6b241d57dbc74f37c1d096307d88">snake_body_part_list</a></td><td class="entry"><a class="el" href="class_snake.html">Snake</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_snake.html#af3150c7958738891bf380336196fc908">snake_body_size</a></td><td class="entry"><a class="el" href="class_snake.html">Snake</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="class_snake.html#af344eef4a8d498f2041a896dee89b05e">snake_move_position_list</a></td><td class="entry"><a class="el" href="class_snake.html">Snake</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_snake.html#aa8430be138cd484f797a63bb5477ce68">State</a> enum name</td><td class="entry"><a class="el" href="class_snake.html">Snake</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_snake.html#a2c4610ea7c822d7439a7fc7dc4d69cc5">state</a></td><td class="entry"><a class="el" href="class_snake.html">Snake</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_snake.html#a7b955a23fe766918fe8c86270472551e">Update</a>()</td><td class="entry"><a class="el" href="class_snake.html">Snake</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_snake.html#aea682148cd5dea5b1a44188f75ea01ae">UpdateSnakeBodyParts</a>()</td><td class="entry"><a class="el" href="class_snake.html">Snake</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
 </table></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
-</small></address>
 </div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
 </body>
 </html>

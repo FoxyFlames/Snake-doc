@@ -9,6 +9,9 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
@@ -40,7 +43,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 <script type="application/json" id="doxygen-config">
 {
   "relPath": "",
-  "generateTreeView": false,
+  "generateTreeView": true,
   "searchEngine": true,
   "serverBasedSearch": false,
   "disableIndex": false,
@@ -72,6 +75,19 @@ document.addEventListener('DOMContentLoaded', codefold.init);
   </ul>
 </div><!-- main-nav -->
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('files.html','',''); });
+</script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow">
@@ -97,19 +113,25 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 <div class="contents">
 <div class="textblock">Here is a list of all files with brief descriptions:</div><div class="directory">
 <table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><span class="spacer">&#160;</span><a class="el" href="dir_84bbf7b3c7f28a5a18725745e1505219.html" target="_self">Assets</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_" class="odd"><td class="entry"><span class="spacer">&#160;</span><span class="spacer">&#160;</span><a class="el" href="dir_f13b41af88cf68434578284aaf699e39.html" target="_self">Scripts</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_0_" class="even"><td class="entry"><span class="spacer">&#160;</span><span class="spacer">&#160;</span><span class="spacer">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="_game_assets_8cs.html" target="_self">GameAssets.cs</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_1_" class="odd"><td class="entry"><span class="spacer">&#160;</span><span class="spacer">&#160;</span><span class="spacer">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="_game_handler_8cs.html" target="_self">GameHandler.cs</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_2_" class="even"><td class="entry"><span class="spacer">&#160;</span><span class="spacer">&#160;</span><span class="spacer">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="_level_grid_8cs.html" target="_self">LevelGrid.cs</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_3_" class="odd"><td class="entry"><span class="spacer">&#160;</span><span class="spacer">&#160;</span><span class="spacer">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="_snake_8cs.html" target="_self">Snake.cs</a></td><td class="desc"></td></tr>
+<tr id="row_0_" class="even"><td class="entry"><span class="spacer">&#160;</span><a class="el" href="dir_3d328b3dca154a477d99beb656992be2.html" target="_self">Unity</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_" class="odd"><td class="entry"><span class="spacer">&#160;</span><span class="spacer">&#160;</span><a class="el" href="dir_5ca4c23a4bd89959aafac5d39e3746d3.html" target="_self">Snake</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_" class="even"><td class="entry"><span class="spacer">&#160;</span><span class="spacer">&#160;</span><span class="spacer">&#160;</span><a class="el" href="dir_0873f3eda21ad10ea0f5eb5f0aa78476.html" target="_self">Assets</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_" class="odd"><td class="entry"><span class="spacer">&#160;</span><span class="spacer">&#160;</span><span class="spacer">&#160;</span><span class="spacer">&#160;</span><a class="el" href="dir_a6178ae263826d131a3ba377bacd6639.html" target="_self">Scripts</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_" class="even"><td class="entry"><span class="spacer">&#160;</span><span class="spacer">&#160;</span><span class="spacer">&#160;</span><span class="spacer">&#160;</span><span class="spacer">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="_game_assets_8cs.html" target="_self">GameAssets.cs</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_1_" class="odd"><td class="entry"><span class="spacer">&#160;</span><span class="spacer">&#160;</span><span class="spacer">&#160;</span><span class="spacer">&#160;</span><span class="spacer">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="_game_handler_8cs.html" target="_self">GameHandler.cs</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_2_" class="even"><td class="entry"><span class="spacer">&#160;</span><span class="spacer">&#160;</span><span class="spacer">&#160;</span><span class="spacer">&#160;</span><span class="spacer">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="_level_grid_8cs.html" target="_self">LevelGrid.cs</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_3_" class="odd"><td class="entry"><span class="spacer">&#160;</span><span class="spacer">&#160;</span><span class="spacer">&#160;</span><span class="spacer">&#160;</span><span class="spacer">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="_score_window_8cs.html" target="_self">ScoreWindow.cs</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_4_" class="even"><td class="entry"><span class="spacer">&#160;</span><span class="spacer">&#160;</span><span class="spacer">&#160;</span><span class="spacer">&#160;</span><span class="spacer">&#160;</span><span class="icondoc"><div class="doc-icon"></div></span><a class="el" href="_snake_8cs.html" target="_self">Snake.cs</a></td><td class="desc"></td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
-</small></address>
 </div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
 </body>
 </html>

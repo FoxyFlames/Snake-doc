@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.18.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Snake: GameAssets Class Reference</title>
+<title>Snake: Snake.SnakeBodyPart Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
   </div>
 </div>
 <script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('class_game_assets.html','','class_game_assets-members'); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_snake_1_1_snake_body_part.html','','class_snake_1_1_snake_body_part-members'); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -108,29 +108,80 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_game_ass
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">GameAssets Class Reference</div></div>
+  <div class="headertitle"><div class="title">Snake.SnakeBodyPart Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:ab57b58cfcc23bff5375a641b336c14e0" id="r_ab57b58cfcc23bff5375a641b336c14e0"><td class="memItemLeft">Sprite&#160;</td><td class="memItemRight"><a class="el" href="#ab57b58cfcc23bff5375a641b336c14e0">food_sprite</a></td></tr>
-<tr class="memitem:a11e8d1ce2b9e3dd1d2068f5d334f4488" id="r_a11e8d1ce2b9e3dd1d2068f5d334f4488"><td class="memItemLeft">Sprite&#160;</td><td class="memItemRight"><a class="el" href="#a11e8d1ce2b9e3dd1d2068f5d334f4488">snake_head_sprite</a></td></tr>
-<tr class="memitem:a77ce97c0bea48c9ce4114126dd83cd94" id="r_a77ce97c0bea48c9ce4114126dd83cd94"><td class="memItemLeft">Sprite&#160;</td><td class="memItemRight"><a class="el" href="#a77ce97c0bea48c9ce4114126dd83cd94">snake_body_sprite</a></td></tr>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:add1abea57fc1ad743d1e2148988f22b2" id="r_add1abea57fc1ad743d1e2148988f22b2"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#add1abea57fc1ad743d1e2148988f22b2">SnakeBodyPart</a> (int body_index)</td></tr>
+<tr class="memitem:af7a187c0697debec3415ac331d329380" id="r_af7a187c0697debec3415ac331d329380"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af7a187c0697debec3415ac331d329380">SetGridPosition</a> (Vector2Int grid_position)</td></tr>
+<tr class="memitem:ac49168d880f48d681daf8241b7d13414" id="r_ac49168d880f48d681daf8241b7d13414"><td class="memItemLeft">Vector2Int&#160;</td><td class="memItemRight"><a class="el" href="#ac49168d880f48d681daf8241b7d13414">GetGridPosition</a> ()</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:a26dc6d883567c544d42627584ff6e6fe" id="r_a26dc6d883567c544d42627584ff6e6fe"><td class="memItemLeft">static <a class="el" href="class_game_assets.html">GameAssets</a>&#160;</td><td class="memItemRight"><a class="el" href="#a26dc6d883567c544d42627584ff6e6fe">instance</a></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a250b7349fa5d3fa058251b4833823ef9" id="r_a250b7349fa5d3fa058251b4833823ef9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a250b7349fa5d3fa058251b4833823ef9">Awake</a> ()</td></tr>
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a08fdf5cdc1186142f687770e009fd53c" id="r_a08fdf5cdc1186142f687770e009fd53c"><td class="memItemLeft">Vector2Int&#160;</td><td class="memItemRight"><a class="el" href="#a08fdf5cdc1186142f687770e009fd53c">grid_position</a></td></tr>
+<tr class="memitem:abaf1310fc9d7fc2a06920296c990295b" id="r_abaf1310fc9d7fc2a06920296c990295b"><td class="memItemLeft">Transform&#160;</td><td class="memItemRight"><a class="el" href="#abaf1310fc9d7fc2a06920296c990295b">transform</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>loads sprites for use when creating objects </p>
-</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a250b7349fa5d3fa058251b4833823ef9" name="a250b7349fa5d3fa058251b4833823ef9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a250b7349fa5d3fa058251b4833823ef9">&#9670;&#160;</a></span>Awake()</h2>
+<div class="textblock"><p>handles the creation of body parts and sprites </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="add1abea57fc1ad743d1e2148988f22b2" name="add1abea57fc1ad743d1e2148988f22b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add1abea57fc1ad743d1e2148988f22b2">&#9670;&#160;</a></span>SnakeBodyPart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Snake.SnakeBodyPart.SnakeBodyPart </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>body_index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ac49168d880f48d681daf8241b7d13414" name="ac49168d880f48d681daf8241b7d13414"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac49168d880f48d681daf8241b7d13414">&#9670;&#160;</a></span>GetGridPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector2Int Snake.SnakeBodyPart.GetGridPosition </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af7a187c0697debec3415ac331d329380" name="af7a187c0697debec3415ac331d329380"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7a187c0697debec3415ac331d329380">&#9670;&#160;</a></span>SetGridPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Snake.SnakeBodyPart.SetGridPosition </td>
+          <td>(</td>
+          <td class="paramtype">Vector2Int</td>          <td class="paramname"><span class="paramname"><em>grid_position</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>sets position of body part </p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a08fdf5cdc1186142f687770e009fd53c" name="a08fdf5cdc1186142f687770e009fd53c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08fdf5cdc1186142f687770e009fd53c">&#9670;&#160;</a></span>grid_position</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -139,10 +190,7 @@ Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void GameAssets.Awake </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
+          <td class="memname">Vector2Int Snake.SnakeBodyPart.grid_position</td>
         </tr>
       </table>
   </td>
@@ -154,23 +202,8 @@ Private Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
-<a id="ab57b58cfcc23bff5375a641b336c14e0" name="ab57b58cfcc23bff5375a641b336c14e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab57b58cfcc23bff5375a641b336c14e0">&#9670;&#160;</a></span>food_sprite</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Sprite GameAssets.food_sprite</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a26dc6d883567c544d42627584ff6e6fe" name="a26dc6d883567c544d42627584ff6e6fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26dc6d883567c544d42627584ff6e6fe">&#9670;&#160;</a></span>instance</h2>
+<a id="abaf1310fc9d7fc2a06920296c990295b" name="abaf1310fc9d7fc2a06920296c990295b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abaf1310fc9d7fc2a06920296c990295b">&#9670;&#160;</a></span>transform</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -179,48 +212,20 @@ Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_game_assets.html">GameAssets</a> GameAssets.instance</td>
+          <td class="memname">Transform Snake.SnakeBodyPart.transform</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a77ce97c0bea48c9ce4114126dd83cd94" name="a77ce97c0bea48c9ce4114126dd83cd94"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77ce97c0bea48c9ce4114126dd83cd94">&#9670;&#160;</a></span>snake_body_sprite</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Sprite GameAssets.snake_body_sprite</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a11e8d1ce2b9e3dd1d2068f5d334f4488" name="a11e8d1ce2b9e3dd1d2068f5d334f4488"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11e8d1ce2b9e3dd1d2068f5d334f4488">&#9670;&#160;</a></span>snake_head_sprite</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Sprite GameAssets.snake_head_sprite</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>D:/Unity/Snake/Assets/Scripts/<a class="el" href="_game_assets_8cs.html">GameAssets.cs</a></li>
+<li>D:/Unity/Snake/Assets/Scripts/<a class="el" href="_snake_8cs.html">Snake.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -235,7 +240,7 @@ Private Member Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="class_game_assets.html">GameAssets</a></li>
+    <li class="navelem"><a href="class_snake.html">Snake</a></li><li class="navelem"><a href="class_snake_1_1_snake_body_part.html">SnakeBodyPart</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
   </ul>
 </div>

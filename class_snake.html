@@ -9,6 +9,9 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
@@ -40,7 +43,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 <script type="application/json" id="doxygen-config">
 {
   "relPath": "",
-  "generateTreeView": false,
+  "generateTreeView": true,
   "searchEngine": true,
   "serverBasedSearch": false,
   "disableIndex": false,
@@ -71,6 +74,21 @@ document.addEventListener('DOMContentLoaded', codefold.init);
     </li>
   </ul>
 </div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_snake.html','','class_snake-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow">
 </div>
@@ -89,29 +107,30 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 </div>
 </div>
 
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
-  <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="class_snake-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Snake Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="dynheader">
-Inheritance diagram for Snake:</div>
-<div class="dyncontent">
- <div class="center">
-  <img src="class_snake.png" alt=""/>
- </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:SnakeBodyPart" id="r_SnakeBodyPart"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_snake_1_1_snake_body_part.html">SnakeBodyPart</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:aa8430be138cd484f797a63bb5477ce68" id="r_aa8430be138cd484f797a63bb5477ce68"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#aa8430be138cd484f797a63bb5477ce68">State</a> { <a class="el" href="#aa8430be138cd484f797a63bb5477ce68abd9f7c5d6ab4201b138a3e51dab7056f">Alive</a>
+, <a class="el" href="#aa8430be138cd484f797a63bb5477ce68a183b62c7f067711f9c5a54913c054617">Dead</a>
+ }</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a820c12cc45e768323bfa83a33490608f" id="r_a820c12cc45e768323bfa83a33490608f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a820c12cc45e768323bfa83a33490608f">Setup</a> (<a class="el" href="class_level_grid.html">LevelGrid</a> level_grid)</td></tr>
 <tr class="memitem:a99a7bab0f415ff0a41808573a24322da" id="r_a99a7bab0f415ff0a41808573a24322da"><td class="memItemLeft">Vector2Int&#160;</td><td class="memItemRight"><a class="el" href="#a99a7bab0f415ff0a41808573a24322da">GetGridPosition</a> ()</td></tr>
 <tr class="memitem:aa0968927cb27406caf2da0b9c692a09d" id="r_aa0968927cb27406caf2da0b9c692a09d"><td class="memItemLeft">List&lt; Vector2Int &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aa0968927cb27406caf2da0b9c692a09d">GetFullSnakeBody</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a2c4610ea7c822d7439a7fc7dc4d69cc5" id="r_a2c4610ea7c822d7439a7fc7dc4d69cc5"><td class="memItemLeft"><a class="el" href="#aa8430be138cd484f797a63bb5477ce68">State</a>&#160;</td><td class="memItemRight"><a class="el" href="#a2c4610ea7c822d7439a7fc7dc4d69cc5">state</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -119,6 +138,8 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a7b955a23fe766918fe8c86270472551e" id="r_a7b955a23fe766918fe8c86270472551e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7b955a23fe766918fe8c86270472551e">Update</a> ()</td></tr>
 <tr class="memitem:a2b90deaaae22de89fbb1f30d7866c77d" id="r_a2b90deaaae22de89fbb1f30d7866c77d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2b90deaaae22de89fbb1f30d7866c77d">HandleInput</a> ()</td></tr>
 <tr class="memitem:a2f0dff3b062cd16968f5cf0fdca75fc2" id="r_a2f0dff3b062cd16968f5cf0fdca75fc2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2f0dff3b062cd16968f5cf0fdca75fc2">HandleGridMovement</a> ()</td></tr>
+<tr class="memitem:a11adc36f6c5e194e13246c2e519abf6a" id="r_a11adc36f6c5e194e13246c2e519abf6a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a11adc36f6c5e194e13246c2e519abf6a">CreateSnakeBodyPart</a> ()</td></tr>
+<tr class="memitem:aea682148cd5dea5b1a44188f75ea01ae" id="r_aea682148cd5dea5b1a44188f75ea01ae"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aea682148cd5dea5b1a44188f75ea01ae">UpdateSnakeBodyParts</a> ()</td></tr>
 <tr class="memitem:aaa2d92a30cbbdde1feb08811196c6adf" id="r_aaa2d92a30cbbdde1feb08811196c6adf"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#aaa2d92a30cbbdde1feb08811196c6adf">GetAngleFromVector</a> (Vector2Int dir)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
@@ -130,7 +151,27 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:aea36d674678f8b5be346a5a2fb7125f9" id="r_aea36d674678f8b5be346a5a2fb7125f9"><td class="memItemLeft"><a class="el" href="class_level_grid.html">LevelGrid</a>&#160;</td><td class="memItemRight"><a class="el" href="#aea36d674678f8b5be346a5a2fb7125f9">level_grid</a></td></tr>
 <tr class="memitem:af3150c7958738891bf380336196fc908" id="r_af3150c7958738891bf380336196fc908"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#af3150c7958738891bf380336196fc908">snake_body_size</a></td></tr>
 <tr class="memitem:af344eef4a8d498f2041a896dee89b05e" id="r_af344eef4a8d498f2041a896dee89b05e"><td class="memItemLeft">List&lt; Vector2Int &gt;&#160;</td><td class="memItemRight"><a class="el" href="#af344eef4a8d498f2041a896dee89b05e">snake_move_position_list</a></td></tr>
+<tr class="memitem:ab6cc6b241d57dbc74f37c1d096307d88" id="r_ab6cc6b241d57dbc74f37c1d096307d88"><td class="memItemLeft">List&lt; <a class="el" href="class_snake_1_1_snake_body_part.html">SnakeBodyPart</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ab6cc6b241d57dbc74f37c1d096307d88">snake_body_part_list</a></td></tr>
 </table>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Member Enumeration Documentation</h2>
+<a id="aa8430be138cd484f797a63bb5477ce68" name="aa8430be138cd484f797a63bb5477ce68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8430be138cd484f797a63bb5477ce68">&#9670;&#160;</a></span>State</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#aa8430be138cd484f797a63bb5477ce68">Snake.State</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aa8430be138cd484f797a63bb5477ce68abd9f7c5d6ab4201b138a3e51dab7056f" name="aa8430be138cd484f797a63bb5477ce68abd9f7c5d6ab4201b138a3e51dab7056f"></a>Alive&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa8430be138cd484f797a63bb5477ce68a183b62c7f067711f9c5a54913c054617" name="aa8430be138cd484f797a63bb5477ce68a183b62c7f067711f9c5a54913c054617"></a>Dead&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="aa34cbbbbe2c499d3f5f4012213ce000c" name="aa34cbbbbe2c499d3f5f4012213ce000c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa34cbbbbe2c499d3f5f4012213ce000c">&#9670;&#160;</a></span>Awake()</h2>
@@ -154,6 +195,32 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a11adc36f6c5e194e13246c2e519abf6a" name="a11adc36f6c5e194e13246c2e519abf6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11adc36f6c5e194e13246c2e519abf6a">&#9670;&#160;</a></span>CreateSnakeBodyPart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Snake.CreateSnakeBodyPart </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>creates snake body part </p>
 
 </div>
 </div>
@@ -241,7 +308,6 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>moves snake in current direction, rotates sprite and sends snake position to grid </p>
-<p>if snake ate food, grow body</p>
 
 </div>
 </div>
@@ -300,6 +366,31 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">void Snake.Update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aea682148cd5dea5b1a44188f75ea01ae" name="aea682148cd5dea5b1a44188f75ea01ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea682148cd5dea5b1a44188f75ea01ae">&#9670;&#160;</a></span>UpdateSnakeBodyParts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Snake.UpdateSnakeBodyParts </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -425,6 +516,28 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ab6cc6b241d57dbc74f37c1d096307d88" name="ab6cc6b241d57dbc74f37c1d096307d88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6cc6b241d57dbc74f37c1d096307d88">&#9670;&#160;</a></span>snake_body_part_list</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_snake_1_1_snake_body_part.html">SnakeBodyPart</a>&gt; Snake.snake_body_part_list</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="af3150c7958738891bf380336196fc908" name="af3150c7958738891bf380336196fc908"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af3150c7958738891bf380336196fc908">&#9670;&#160;</a></span>snake_body_size</h2>
 
@@ -469,14 +582,39 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a2c4610ea7c822d7439a7fc7dc4d69cc5" name="a2c4610ea7c822d7439a7fc7dc4d69cc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c4610ea7c822d7439a7fc7dc4d69cc5">&#9670;&#160;</a></span>state</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aa8430be138cd484f797a63bb5477ce68">State</a> Snake.state</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/Scripts/<a class="el" href="_snake_8cs.html">Snake.cs</a></li>
+<li>D:/Unity/Snake/Assets/Scripts/<a class="el" href="_snake_8cs.html">Snake.cs</a></li>
 </ul>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
-</small></address>
 </div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_snake.html">Snake</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
 </body>
 </html>

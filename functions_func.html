@@ -9,6 +9,9 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
@@ -40,7 +43,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 <script type="application/json" id="doxygen-config">
 {
   "relPath": "",
-  "generateTreeView": false,
+  "generateTreeView": true,
   "searchEngine": true,
   "serverBasedSearch": false,
   "disableIndex": false,
@@ -72,6 +75,19 @@ document.addEventListener('DOMContentLoaded', codefold.init);
   </ul>
 </div><!-- main-nav -->
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('functions_func.html','',''); });
+</script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow">
@@ -93,26 +109,36 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 
 <div class="contents">
 <div class="textblock">Here is a list of all functions with links to the classes they belong to:</div><br/>
-<div class="qindex"><a class="qindex" href="#index_a">A</a><div class="alphasepar"></div><a class="qindex" href="#index_g">G</a><div class="alphasepar"></div><a class="qindex" href="#index_h">H</a><div class="alphasepar"></div><a class="qindex" href="#index_l">L</a><div class="alphasepar"></div><a class="qindex" href="#index_s">S</a><div class="alphasepar"></div><a class="qindex" href="#index_t">T</a><div class="alphasepar"></div><a class="qindex" href="#index_u">U</a></div>
+<div class="qindex"><a class="qindex" href="#index_a">A</a><div class="alphasepar"></div><a class="qindex" href="#index_c">C</a><div class="alphasepar"></div><a class="qindex" href="#index_g">G</a><div class="alphasepar"></div><a class="qindex" href="#index_h">H</a><div class="alphasepar"></div><a class="qindex" href="#index_l">L</a><div class="alphasepar"></div><a class="qindex" href="#index_s">S</a><div class="alphasepar"></div><a class="qindex" href="#index_t">T</a><div class="alphasepar"></div><a class="qindex" href="#index_u">U</a></div>
 <ul>
-<li>Awake()&#160;:&#160;<a class="el" href="class_game_assets.html#a250b7349fa5d3fa058251b4833823ef9">GameAssets</a>, <a class="el" href="class_snake.html#aa34cbbbbe2c499d3f5f4012213ce000c">Snake</a></li>
+<li>AddScore()&#160;:&#160;<a class="el" href="class_game_handler.html#a75095ba5f740a145b1b13e1da73aad60">GameHandler</a></li>
+<li>Awake()&#160;:&#160;<a class="el" href="class_game_assets.html#a250b7349fa5d3fa058251b4833823ef9">GameAssets</a>, <a class="el" href="class_game_handler.html#a404ad1f46021f5c1297af823f1df68bf">GameHandler</a>, <a class="el" href="class_score_window.html#a2eb7be888f5548bf59b8a618cbf72683">ScoreWindow</a>, <a class="el" href="class_snake.html#aa34cbbbbe2c499d3f5f4012213ce000c">Snake</a></li>
+<li>CheckGridPosition()&#160;:&#160;<a class="el" href="class_level_grid.html#af7bd62463045f0a013d0b492160e598a">LevelGrid</a></li>
+<li>CreateSnakeBodyPart()&#160;:&#160;<a class="el" href="class_snake.html#a11adc36f6c5e194e13246c2e519abf6a">Snake</a></li>
 <li>GetAngleFromVector()&#160;:&#160;<a class="el" href="class_snake.html#aaa2d92a30cbbdde1feb08811196c6adf">Snake</a></li>
 <li>GetFullSnakeBody()&#160;:&#160;<a class="el" href="class_snake.html#aa0968927cb27406caf2da0b9c692a09d">Snake</a></li>
-<li>GetGridPosition()&#160;:&#160;<a class="el" href="class_snake.html#a99a7bab0f415ff0a41808573a24322da">Snake</a></li>
+<li>GetGridPosition()&#160;:&#160;<a class="el" href="class_snake.html#a99a7bab0f415ff0a41808573a24322da">Snake</a>, <a class="el" href="class_snake_1_1_snake_body_part.html#ac49168d880f48d681daf8241b7d13414">Snake.SnakeBodyPart</a></li>
+<li>GetScore()&#160;:&#160;<a class="el" href="class_game_handler.html#ab9127e9fadaefc7dff8cde548059ee50">GameHandler</a></li>
 <li>HandleGridMovement()&#160;:&#160;<a class="el" href="class_snake.html#a2f0dff3b062cd16968f5cf0fdca75fc2">Snake</a></li>
 <li>HandleInput()&#160;:&#160;<a class="el" href="class_snake.html#a2b90deaaae22de89fbb1f30d7866c77d">Snake</a></li>
 <li>LevelGrid()&#160;:&#160;<a class="el" href="class_level_grid.html#a27788e15c62a72188427b6c699faf99f">LevelGrid</a></li>
+<li>SetGridPosition()&#160;:&#160;<a class="el" href="class_snake_1_1_snake_body_part.html#af7a187c0697debec3415ac331d329380">Snake.SnakeBodyPart</a></li>
 <li>Setup()&#160;:&#160;<a class="el" href="class_level_grid.html#a5b1c3eddce39bd0556b9328d73a27674">LevelGrid</a>, <a class="el" href="class_snake.html#a820c12cc45e768323bfa83a33490608f">Snake</a></li>
+<li>SnakeBodyPart()&#160;:&#160;<a class="el" href="class_snake_1_1_snake_body_part.html#add1abea57fc1ad743d1e2148988f22b2">Snake.SnakeBodyPart</a></li>
 <li>SpawnFood()&#160;:&#160;<a class="el" href="class_level_grid.html#a12cd2edf0057a707648ac531095967f7">LevelGrid</a></li>
 <li>Start()&#160;:&#160;<a class="el" href="class_game_handler.html#a8c923e4fda0563b92b6f0ac69df90dc4">GameHandler</a></li>
 <li>TrySnakeEatFood()&#160;:&#160;<a class="el" href="class_level_grid.html#a66de065b1ad6a999af07fcb77cd45ab3">LevelGrid</a></li>
-<li>Update()&#160;:&#160;<a class="el" href="class_snake.html#a7b955a23fe766918fe8c86270472551e">Snake</a></li>
+<li>Update()&#160;:&#160;<a class="el" href="class_score_window.html#a4d57ba04a1714a6380bbf956fcfc806f">ScoreWindow</a>, <a class="el" href="class_snake.html#a7b955a23fe766918fe8c86270472551e">Snake</a></li>
+<li>UpdateSnakeBodyParts()&#160;:&#160;<a class="el" href="class_snake.html#aea682148cd5dea5b1a44188f75ea01ae">Snake</a></li>
 </ul>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
-</small></address>
 </div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
 </body>
 </html>

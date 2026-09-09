@@ -9,6 +9,9 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
@@ -40,7 +43,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 <script type="application/json" id="doxygen-config">
 {
   "relPath": "",
-  "generateTreeView": false,
+  "generateTreeView": true,
   "searchEngine": true,
   "serverBasedSearch": false,
   "disableIndex": false,
@@ -71,6 +74,21 @@ document.addEventListener('DOMContentLoaded', codefold.init);
     </li>
   </ul>
 </div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_level_grid.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow">
 </div>
@@ -89,8 +107,6 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 </div>
 </div>
 
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">LevelGrid Member List</div></div>
 </div><!--header-->
@@ -98,20 +114,24 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 
 <p>This is the complete list of members for <a class="el" href="class_level_grid.html">LevelGrid</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_level_grid.html#a2ada2f8715dbc41024ba480f51077382">food_game_object</a></td><td class="entry"><a class="el" href="class_level_grid.html">LevelGrid</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_level_grid.html#a62a11f0997d013a0d5df3e2823ebdf10">food_grid_position</a></td><td class="entry"><a class="el" href="class_level_grid.html">LevelGrid</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_level_grid.html#a07b53ebc7e0b36ebb20a4e3a41b8bb90">height</a></td><td class="entry"><a class="el" href="class_level_grid.html">LevelGrid</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_level_grid.html#a27788e15c62a72188427b6c699faf99f">LevelGrid</a>(int width, int height)</td><td class="entry"><a class="el" href="class_level_grid.html">LevelGrid</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_level_grid.html#a5b1c3eddce39bd0556b9328d73a27674">Setup</a>(Snake snake)</td><td class="entry"><a class="el" href="class_level_grid.html">LevelGrid</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_level_grid.html#ab9e0eed94f72218e1aa633f10f85e05b">snake</a></td><td class="entry"><a class="el" href="class_level_grid.html">LevelGrid</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_level_grid.html#a12cd2edf0057a707648ac531095967f7">SpawnFood</a>()</td><td class="entry"><a class="el" href="class_level_grid.html">LevelGrid</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_level_grid.html#a66de065b1ad6a999af07fcb77cd45ab3">TrySnakeEatFood</a>(Vector2Int snake_grid_position)</td><td class="entry"><a class="el" href="class_level_grid.html">LevelGrid</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_level_grid.html#a8bb9ce0ab1334330c18e260368893466">width</a></td><td class="entry"><a class="el" href="class_level_grid.html">LevelGrid</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_level_grid.html#af7bd62463045f0a013d0b492160e598a">CheckGridPosition</a>(Vector2Int grid_position)</td><td class="entry"><a class="el" href="class_level_grid.html">LevelGrid</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_level_grid.html#a2ada2f8715dbc41024ba480f51077382">food_game_object</a></td><td class="entry"><a class="el" href="class_level_grid.html">LevelGrid</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_level_grid.html#a62a11f0997d013a0d5df3e2823ebdf10">food_grid_position</a></td><td class="entry"><a class="el" href="class_level_grid.html">LevelGrid</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_level_grid.html#a07b53ebc7e0b36ebb20a4e3a41b8bb90">height</a></td><td class="entry"><a class="el" href="class_level_grid.html">LevelGrid</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_level_grid.html#a27788e15c62a72188427b6c699faf99f">LevelGrid</a>(int width, int height)</td><td class="entry"><a class="el" href="class_level_grid.html">LevelGrid</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_level_grid.html#a5b1c3eddce39bd0556b9328d73a27674">Setup</a>(Snake snake)</td><td class="entry"><a class="el" href="class_level_grid.html">LevelGrid</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_level_grid.html#ab9e0eed94f72218e1aa633f10f85e05b">snake</a></td><td class="entry"><a class="el" href="class_level_grid.html">LevelGrid</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_level_grid.html#a12cd2edf0057a707648ac531095967f7">SpawnFood</a>()</td><td class="entry"><a class="el" href="class_level_grid.html">LevelGrid</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_level_grid.html#a66de065b1ad6a999af07fcb77cd45ab3">TrySnakeEatFood</a>(Vector2Int snake_grid_position)</td><td class="entry"><a class="el" href="class_level_grid.html">LevelGrid</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_level_grid.html#a8bb9ce0ab1334330c18e260368893466">width</a></td><td class="entry"><a class="el" href="class_level_grid.html">LevelGrid</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
 </table></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
-</small></address>
 </div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
 </body>
 </html>
